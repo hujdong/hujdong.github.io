@@ -1,164 +1,536 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>照猫画虎</title><meta name="author" content="hujdong"><meta name="copyright" content="hujdong"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="照猫画虎">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>照猫画虎</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="照猫画虎">
 <meta property="og:type" content="website">
 <meta property="og:title" content="照猫画虎">
 <meta property="og:url" content="https://hujdong.github.io/project/index.html">
 <meta property="og:site_name" content="照猫画虎">
 <meta property="og:description" content="照猫画虎">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://hujdong.github.io/project/img/butterfly-icon.png">
 <meta property="article:author" content="hujdong">
 <meta property="article:tag" content="照猫画虎">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://hujdong.github.io/project/img/butterfly-icon.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/project/img/favicon.png"><link rel="canonical" href="https://hujdong.github.io/project/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/project/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
-    (() => {
-      
-    const saveToLocal = {
-      set: (key, value, ttl) => {
-        if (!ttl) return
-        const expiry = Date.now() + ttl * 86400000
-        localStorage.setItem(key, JSON.stringify({ value, expiry }))
-      },
-      get: key => {
-        const itemStr = localStorage.getItem(key)
-        if (!itemStr) return undefined
-        const { value, expiry } = JSON.parse(itemStr)
-        if (Date.now() > expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return value
-      }
-    }
-
-    window.btf = {
-      saveToLocal,
-      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
-        const script = document.createElement('script')
-        script.src = url
-        script.async = true
-        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
-        script.onload = script.onreadystatechange = () => {
-          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
-        }
-        script.onerror = reject
-        document.head.appendChild(script)
-      }),
-      getCSS: (url, id) => new Promise((resolve, reject) => {
-        const link = document.createElement('link')
-        link.rel = 'stylesheet'
-        link.href = url
-        if (id) link.id = id
-        link.onload = link.onreadystatechange = () => {
-          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
-        }
-        link.onerror = reject
-        document.head.appendChild(link)
-      }),
-      addGlobalFn: (key, fn, name = false, parent = window) => {
-        if (!false && key.startsWith('pjax')) return
-        const globalFn = parent.globalFn || {}
-        globalFn[key] = globalFn[key] || {}
-        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
-        parent.globalFn = globalFn
-      }
-    }
   
-      
-      const activateDarkMode = () => {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      const activateLightMode = () => {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-
-      btf.activateDarkMode = activateDarkMode
-      btf.activateLightMode = activateLightMode
-
-      const theme = saveToLocal.get('theme')
-    
-          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
-        
-      
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
-      }
-    
-      
-    const detectApple = () => {
-      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
+    <link rel="alternate" href="/project/atom.xml" title="照猫画虎" type="application/atom+xml">
   
-    })()
-  </script><script>const GLOBAL_CONFIG = {
-  root: '/project/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
-  copy: {
-    success: '复制成功',
-    error: '复制失败',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  dateSuffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'null',
-  Snackbar: undefined,
-  infinitegrid: {
-    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
-    buttonText: '加载更多'
-  },
-  isPhotoFigcaption: false,
-  islazyloadPlugin: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  },
-  autoDarkmode: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: '照猫画虎',
-  isHighlightShrink: false,
-  isToc: false,
-  pageType: 'home'
-}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/project/"><span class="site-name">照猫画虎</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">照猫画虎</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/project/2025/08/09/butterfly%E4%B8%BB%E9%A2%98%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97/" title="butterfly主题部署指南V2">butterfly主题部署指南V2</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-08-09T06:25:50.000Z" title="发表于 2025-08-09 14:25:50">2025-08-09</time></span></div><div class="content"> title: butterfly主题部署指南date: 2025-08-09 13:22:39tags:hexo的butterfly主题美化，2024年初版转载自：https://blog.csdn.net/JesseXW 先贴上butterfly主题作者的官方美化文档地址，如果有大佬比较会的可以直接看他的（不过部分功能可能用不了了）：Butterfly 安裝文檔(一) 快速開始 | Butterfly 注意！！！如果发现配置不生效，请先执行 hexo clean，然后清除浏览器缓存试试。如果还是不行，请检查配置文件的缩进是否有问题！！！ 1. 准备工作1.1 安装butterfly在hexo的根目录下键入以下命令： 1npm install hexo-theme-butterfly  1.2 修改配置文件，应用butterfly主题修改 _config.yml 中的 theme 属性为 butterfly。  1.3 安装插件如果你没有 pug 以及 stylus 的渲染器，请下载安装： 在hexo根目录下键入以下命令： 1npm install hexo-renderer-...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/project/2025/08/09/%E5%9C%A8Linux%E4%B8%AD%EF%BC%8C%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0%E5%92%8C%E5%8D%87%E7%BA%A7%EF%BC%9F/" title="在Linux中，如何进行系统更新和升级？">在Linux中，如何进行系统更新和升级？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-08-09T05:16:52.000Z" title="发表于 2025-08-09 13:16:52">2025-08-09</time></span></div><div class="content">在Linux中，系统更新和升级是维护系统安全性和功能性的重要任务。这通常涉及更新软件包、内核和系统工具。不同的Linux发行版有不同的包管理系统，以下是一些常见发行版中进行系统更新和升级的方法： 1. Debian&#x2F;Ubuntu 系统使用 apt 包管理器进行更新和升级。  更新软件包列表：  1sudo apt update  这个命令会从配置的软件仓库中获取最新的软件包信息。  升级所有已安装的软件包：  1sudo apt upgrade  这个命令会安装所有可用的更新，但不会删除任何软件包。  安装新版本的内核： 如果系统提供了新版本的内核，可以使用 apt 进行安装：  1sudo apt install linux-image-generic  替换 linux-image-generic 为特定版本的内核，如果有的话。  清理不再需要的软件包：  1sudo apt autoremove  这个命令会删除那些被安装为其他软件包依赖但现已不再需要的软件包。   2. Red Hat&#x2F;CentOS 系统使用 yum 或 dnf 包管理器进行更新和升级...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/project/2025/08/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" title="我的第一篇博客">我的第一篇博客</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-08-02T05:55:54.000Z" title="发表于 2025-08-02 13:55:54">2025-08-02</time></span></div><div class="content">三星手机 ** 小米手机 看看是否可以正常发布。搭建参考的是利民工作室 https://www.limin.studio/2024/11/03/wzbk/博客发布参考的是陶渊小明 https://tyxiaoming.xin/2025/01/21/%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%8D%9A%E5%AE%A2/ 本地启动命令 ：hexo clean； hexo generate; hexo server发布到GitHub命令是：hexo clean； hexo generate; hexo deploy </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/project/2025/08/02/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-08-02T05:39:42.051Z" title="发表于 2025-08-02 13:39:42">2025-08-02</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  More info: Writing Run server1$ hexo server  More info: Server Generate static files1$ hexo generate  More info: Generating Deploy to remote sites1$ hexo deploy  More info: Deployment </div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/project/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/project/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">hujdong</div><div class="author-info-description">照猫画虎</div><div class="site-data"><a href="/project/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/project/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/project/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/project/2025/08/09/butterfly%E4%B8%BB%E9%A2%98%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97/" title="butterfly主题部署指南V2">butterfly主题部署指南V2</a><time datetime="2025-08-09T06:25:50.000Z" title="发表于 2025-08-09 14:25:50">2025-08-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/project/2025/08/09/%E5%9C%A8Linux%E4%B8%AD%EF%BC%8C%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0%E5%92%8C%E5%8D%87%E7%BA%A7%EF%BC%9F/" title="在Linux中，如何进行系统更新和升级？">在Linux中，如何进行系统更新和升级？</a><time datetime="2025-08-09T05:16:52.000Z" title="发表于 2025-08-09 13:16:52">2025-08-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/project/2025/08/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" title="我的第一篇博客">我的第一篇博客</a><time datetime="2025-08-02T05:55:54.000Z" title="发表于 2025-08-02 13:55:54">2025-08-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/project/2025/08/02/hello-world/" title="Hello World">Hello World</a><time datetime="2025-08-02T05:39:42.051Z" title="发表于 2025-08-02 13:39:42">2025-08-02</time></div></div></div></div><div class="card-widget card-archives">
-    <div class="item-headline">
-      <i class="fas fa-archive"></i>
-      <span>归档</span>
+  
+    <link rel="shortcut icon" href="/project/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/project/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/project/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/project/" id="logo">照猫画虎</a>
+      </h1>
       
     </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/project/">Home</a>
+        
+          <a class="main-nav-link" href="/project/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/project/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://hujdong.github.io/project"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
   
-    <ul class="card-archive-list">
+    <article id="post-butterfly主题部署指南" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/project/2025/08/09/butterfly%E4%B8%BB%E9%A2%98%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97/" class="article-date">
+  <time class="dt-published" datetime="2025-08-09T06:25:50.000Z" itemprop="datePublished">2025-08-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/project/2025/08/09/butterfly%E4%B8%BB%E9%A2%98%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97/">butterfly主题部署指南V2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
       
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/project/archives/2025/08/">
-            <span class="card-archive-list-date">
-              八月 2025
-            </span>
-            <span class="card-archive-list-count">4</span>
-          </a>
-        </li>
+        <hr>
+<h2 id="title-butterfly主题部署指南date-2025-08-09-13-22-39tags"><a href="#title-butterfly主题部署指南date-2025-08-09-13-22-39tags" class="headerlink" title="title: butterfly主题部署指南date: 2025-08-09 13:22:39tags:"></a>title: butterfly主题部署指南<br>date: 2025-08-09 13:22:39<br>tags:</h2><h1 id="hexo的butterfly主题美化，2024年初版"><a href="#hexo的butterfly主题美化，2024年初版" class="headerlink" title="hexo的butterfly主题美化，2024年初版"></a>hexo的butterfly主题美化，2024年初版</h1><p>转载自：<a target="_blank" rel="noopener" href="https://blog.csdn.net/JesseXW">https://blog.csdn.net/JesseXW</a></p>
+<p><strong>先贴上butterfly主题作者的官方美化文档地址，如果有大佬比较会的可以直接看他的（<del>不过部分功能可能用不了了</del>）：</strong><br><a target="_blank" rel="noopener" href="https://butterfly.js.org/posts/21cfbf15/#%E5%8D%87%E7%B4%9A%E5%BB%BA%E8%AD%B0" title="Butterfly 安裝文檔(一) 快速開始 | Butterfly">Butterfly 安裝文檔(一) 快速開始 | Butterfly</a></p>
+<p><strong>注意！！！如果发现配置不生效，请先执行 <code>hexo clean</code>，然后清除浏览器缓存试试。如果还是不行，请检查配置文件的缩进是否有问题！！！</strong></p>
+<h2 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1. 准备工作"></a>1. 准备工作</h2><h3 id="1-1-安装butterfly"><a href="#1-1-安装butterfly" class="headerlink" title="1.1 安装butterfly"></a>1.1 安装butterfly</h3><p><strong>在hexo的根目录下</strong>键入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-theme-butterfly</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2-修改配置文件，应用butterfly主题"><a href="#1-2-修改配置文件，应用butterfly主题" class="headerlink" title="1.2 修改配置文件，应用butterfly主题"></a>1.2 修改配置文件，应用butterfly主题</h3><p>修改 <code>_config.yml</code> 中的 <code>theme</code> 属性为 <code>butterfly</code>。</p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-0cc53ca3fb892aa2d472d0ca54158de2.png"></p>
+<h3 id="1-3-安装插件"><a href="#1-3-安装插件" class="headerlink" title="1.3 安装插件"></a>1.3 安装插件</h3><p><strong>如果你没有 pug 以及 stylus 的渲染器，请下载安装：</strong></p>
+<p>在hexo根目录下键入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4-推荐操作，复制一份butterfly主题专用的配置文件"><a href="#1-4-推荐操作，复制一份butterfly主题专用的配置文件" class="headerlink" title="1.4 推荐操作，复制一份butterfly主题专用的配置文件"></a>1.4 推荐操作，复制一份butterfly主题专用的配置文件</h3><p>在 hexo 的根目录创建一个文件 <code>_config.butterfly.yml</code>，后续对butterfly主题的美化配置就在该配置文件下进行修改即可。</p>
+<p><strong>层级关系如下图所示：</strong></p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-1799bd03088fb81ea0888bb1d2281fe7.png"></p>
+<h3 id="1-5-设置一个图片存储目录"><a href="#1-5-设置一个图片存储目录" class="headerlink" title="1.5 设置一个图片存储目录"></a>1.5 设置一个图片存储目录</h3><p>在 <code>source</code> 目录下新建一个 <code>image</code> 文件夹，方便后续存储展示用的相关图片（<del>名字你可以随便取</del>）</p>
+<p><strong>层级关系如下：</strong></p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-6605915ba7f40cc826797d68d5ec67c2.png"></p>
+<!-- 其余内容保持不变 -->
+
+<h2 id="2-网站资料配置"><a href="#2-网站资料配置" class="headerlink" title="2. 网站资料配置"></a>2. 网站资料配置</h2><p>在 <strong>_config.yml</strong> 文件里配置！</p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-73d3ec6379f5c43af4daf6ebb114735e.png"></p>
+<p>对应效果如图：</p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-7a052ba48e20ceaf23d3c07bdf08a8cb.png"></p>
+<h2 id="3-导航栏配置"><a href="#3-导航栏配置" class="headerlink" title="3. 导航栏配置"></a>3. 导航栏配置</h2><p>这里我直接copy展示用的代码了（<del>毕竟完全不会</del>）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">nav:</span><br><span class="line">  logo: /image/test.gif</span><br><span class="line">  display_title: <span class="literal">true</span></span><br><span class="line">  fixed: <span class="literal">false</span> <span class="comment"># fixed navigation bar</span></span><br><span class="line">post_asset_folder: <span class="literal">true</span></span><br><span class="line">menu:</span><br><span class="line">  首页: / || fas fa-home</span><br><span class="line">  时间轴: /archives/ || fas fa-archive</span><br><span class="line">  标签: /tags/ || fas fa-tags</span><br><span class="line">  分类: /categories/ || fas fa-folder-open</span><br><span class="line">  清单||fa fa-heartbeat:</span><br><span class="line">    音乐: /music/ || fas fa-music</span><br><span class="line">    照片: /Gallery/ || fas fa-images</span><br><span class="line">    电影: /movies/ || fas fa-video</span><br></pre></td></tr></table></figure>
+
+<p>效果（<strong>搜索是额外配的，后面会说</strong>）：</p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-8df3966496d14fe526ad2041b0292d71.png"></p>
+<h2 id="4-修改头像"><a href="#4-修改头像" class="headerlink" title="4. 修改头像"></a>4. 修改头像</h2><p>将你喜欢的头像复制到之前配置的image文件夹里，路径如图所示：</p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-bf8ed33c0aba5f9127240e0dca667294.png"></p>
+<p>然后在你复制出来的主题配置文件，也就是  _config.butterfly.yml 中添加如下配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#头像</span></span><br><span class="line">avatar:</span><br><span class="line">  img: /image/miku.jpg</span><br><span class="line">  <span class="comment"># effect: true # 头像会一直转，转的贼快，太鬼畜了</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-顶部图设置"><a href="#5-顶部图设置" class="headerlink" title="5. 顶部图设置"></a>5. 顶部图设置</h2><p>代码如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#顶部图</span></span><br><span class="line">index_img: /image/miku.jpg</span><br><span class="line">default_top_img: /image/miku.jpg</span><br><span class="line">index_top_img_height: 400px <span class="comment">#顶部图高度</span></span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-a8d37c483f102524a0544fb325c6e4a3.png"></p>
+<p><strong>tips：</strong></p>
+<ol>
+<li>感觉400px差不多了，或者默认就是全屏，但是全屏得往下拉才能看见博客。<del>对于萌新不是很友好，我第一次进就是发现找半天找不到博客在哪</del></li>
+<li>图片不要被宽屏误导了，请选择<strong>竖屏</strong>展示的图片，且清晰度越高越好（不然就是糊的）</li>
+<li>经过观察，设置为400px时，展示的图片位置大概就在中间，所以最好选择你最想展示的部分为中间的图片~</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-91f7084634b7b25deeef854ac1e509c6.png"></p>
+<h2 id="6-统计功能"><a href="#6-统计功能" class="headerlink" title="6. 统计功能"></a>6. 统计功能</h2><p>推荐使用百度的api，首先你需要到百度统计官网申请id：</p>
+<p><a target="_blank" rel="noopener" href="https://tongji.baidu.com/web/welcome/login?castk=LTE=" title="百度统计——一站式智能数据分析与应用平台">百度统计——一站式智能数据分析与应用平台</a></p>
+<p>具体咋申请我忘了……自己多找找看吧 </p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-876d0858b5e0ed68987f94a2687f181d.png"></p>
+<p>问号后面的代码就是id，在 _config.yml 中添加如下配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">baidu_analytics: 你的<span class="built_in">id</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-3c3b203d3e5d6b9b7471f5d93c107ce8.png"></p>
+<h2 id="7-运行时间"><a href="#7-运行时间" class="headerlink" title="7. 运行时间"></a>7. 运行时间</h2><p> 代码如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">runtimeshow:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  publish_date: 1/4/2024 00:00:00</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>publish_date 就是你博客的创建时间，格式是 <strong>日&#x2F;月&#x2F;年</strong> </p>
+</blockquote>
+<p>效果：</p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-c9384bcd31aa16e260033db92cd67a53.png"></p>
+<h2 id="8-本地搜索"><a href="#8-本地搜索" class="headerlink" title="8. 本地搜索"></a>8. 本地搜索</h2><p>在主题配置文件下 _config.butterfly.yml 加入如下代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Preload the search data when the page loads.</span></span><br><span class="line">  preload: <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Show top n results per article, show all results by setting to -1</span></span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  <span class="comment"># Unescape html strings to the readable one.</span></span><br><span class="line">  unescape: <span class="literal">true</span></span><br><span class="line">  CDN:</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-a000ed1fafef91f52335e97a62526f75.png"></p>
+<h2 id="9-背景特效"><a href="#9-背景特效" class="headerlink" title="9. 背景特效"></a>9. 背景特效</h2><p>详见官方文档：<a target="_blank" rel="noopener" href="https://butterfly.js.org/posts/ceeb73f/#%E8%83%8C%E6%99%AF%E7%89%B9%E6%95%88" title="Butterfly 安裝文檔(四) 主題配置-2 | Butterfly">Butterfly 安裝文檔(四) 主題配置-2 | Butterfly</a></p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-03fc5e060d723a7f7330230a141d29b9.png"></p>
+<p>我的博客选的是动态彩带，代码如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">canvas_fluttering_ribbon:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  mobile: <span class="literal">false</span> <span class="comment"># false 手机端不显示 true 手机端显示</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="10-鼠标点击特效"><a href="#10-鼠标点击特效" class="headerlink" title="10. 鼠标点击特效"></a>10. 鼠标点击特效</h2><p>目前官方文档中<strong>鼠标点击特效的文字特效已无法使用（截至2024&#x2F;1&#x2F;18）</strong>，目前我的博客采用的是爱心效果，代码如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 点击出现爱心</span></span><br><span class="line">click_heart:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  mobile: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="11-网站副标题（循环打字特效）"><a href="#11-网站副标题（循环打字特效）" class="headerlink" title="11. 网站副标题（循环打字特效）"></a>11. 网站副标题（循环打字特效）</h2><p>添加如下代码即可（速度我已经进行了相应调整，您可以根据自己的喜好进行修改）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 主页subtitle</span></span><br><span class="line">subtitle:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Typewriter Effect (打字效果)</span></span><br><span class="line">  effect: <span class="literal">true</span></span><br><span class="line">  startDelay: 300 <span class="comment"># time before typing starts in milliseconds</span></span><br><span class="line">  typeSpeed: 200 <span class="comment"># type speed in milliseconds</span></span><br><span class="line">  backSpeed: 800 <span class="comment"># backspacing speed in milliseconds</span></span><br><span class="line">  <span class="comment"># loop (循环打字)</span></span><br><span class="line">  loop: <span class="literal">true</span></span><br><span class="line">  <span class="comment"># source 调用三方服务</span></span><br><span class="line">  <span class="comment"># source: false 开关调用</span></span><br><span class="line">  <span class="comment"># subtitle 会先显示 source , 再显示 sub 的內容</span></span><br><span class="line">  <span class="built_in">source</span>: <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 如果关闭打字效果，subtitle 只会显示 sub 的第一行文字</span></span><br><span class="line">  sub:</span><br><span class="line">    - 自小刺头深草里 &amp;#44; 而今渐觉出蓬蒿</span><br><span class="line">    - 时人不识凌云木 &amp;#44; 直待凌云始道高</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-65eefc231690ca91c91853ddd6869514.png"></p>
+<h2 id="12-页面加载动画"><a href="#12-页面加载动画" class="headerlink" title="12. 页面加载动画"></a>12. 页面加载动画</h2><p>在主题配置文件 _config.butterfly.yml 加入以下代码即可：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#加载动画</span></span><br><span class="line">preloader:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  <span class="built_in">source</span>: 1 <span class="comment">#可选值1=fullpage或2=progress bar，可查看https://codebyzach.github.io/pace/</span></span><br><span class="line">  pace_css_url:</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-a2b85380e130b323fdae2e6c5f2ead27.png"></p>
+<blockquote>
+<p>这个加载动画是butterfly默认的，目前在百度上没有找到可以直接使用的加载动画代码或url，只能凑合着用了，呃呃。</p>
+</blockquote>
+<h2 id="13-池塘养鱼"><a href="#13-池塘养鱼" class="headerlink" title="13. 池塘养鱼"></a>13. 池塘养鱼</h2><p>在主题配置文件 _config.butterfly.yml 加入以下代码即可：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">inject:</span><br><span class="line">  <span class="built_in">head</span>:</span><br><span class="line"></span><br><span class="line">  bottom:</span><br><span class="line">       - &lt;script src=<span class="string">&quot;https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">       - &lt;script src=<span class="string">&quot;https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fishes.js&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>有时候会遇到cdn解析失败，导致鱼塘加载不出来，建议还是以js文件格式本地引入，操作方法见下👇👇👇</strong></p>
+<h3 id="13-1-在-source-目录下新建一个-styles-文件夹，用于存放相关文件"><a href="#13-1-在-source-目录下新建一个-styles-文件夹，用于存放相关文件" class="headerlink" title="13.1 在 source 目录下新建一个 styles 文件夹，用于存放相关文件"></a>13.1 在 source 目录下新建一个 styles 文件夹，用于存放相关文件</h3><p>层级如下：</p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-7c2572b09870a5a68e0bdddf11c80d99.png"></p>
+<h3 id="13-2-添加如下两个文件"><a href="#13-2-添加如下两个文件" class="headerlink" title="13.2 添加如下两个文件"></a>13.2 添加如下两个文件</h3><p><strong>注意：这两个文件的目录是基于我设置的styles目录下，如果你的文件夹名称是你自己设置的，请同步修改文件中涉及到的文件引用地址路径！！！</strong></p>
+<p><strong>文件一：fish-base.js</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">// 省略，内容同原文</span><br></pre></td></tr></table></figure>
+
+<p><strong>文件二：fish.js</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">// 省略，内容同原文</span><br></pre></td></tr></table></figure>
+
+<h3 id="13-3-在主题配置文件下引入这两个文件"><a href="#13-3-在主题配置文件下引入这两个文件" class="headerlink" title="13.3 在主题配置文件下引入这两个文件"></a>13.3 在主题配置文件下引入这两个文件</h3><p>代码如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- &lt;script src=<span class="string">&quot;/styles/fish.js&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>一样也得引入 jquery：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- &lt;script src=<span class="string">&quot;https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>层级关系如图所示：</p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-31312e6864b3c409009395c283fe049d.png"></p>
+<h2 id="14-渐变色设置"><a href="#14-渐变色设置" class="headerlink" title="14. 渐变色设置"></a>14. 渐变色设置</h2><p>在styles目录下新建一个 <strong>main.css</strong> 文件，键入以下代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/* 省略，内容同原文 */</span><br></pre></td></tr></table></figure>
+
+<p><strong>同样，也需要在主题配置文件中引入这个css文件：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- &lt;<span class="built_in">link</span> rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;/styles/main.css&quot;</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>层级关系如下图所示：</p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-bdb856e8341b07ec8de0c064c5dc4b3a.png"></p>
+<h2 id="15-浏览器图标修改"><a href="#15-浏览器图标修改" class="headerlink" title="15. 浏览器图标修改"></a>15. 浏览器图标修改</h2><p>先找一个你喜欢的图标，注意格式需为32*32。可以从阿里的矢量图库中下载自己喜欢的：</p>
+<p><a target="_blank" rel="noopener" href="https://www.iconfont.cn/" title="iconfont-阿里巴巴矢量图标库">iconfont-阿里巴巴矢量图标库</a></p>
+<p>保存后放在image文件夹内（或者你自己自定义存图片的文件夹）：</p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-bca7c5ac07ec6206bbc7f616b20dfb66.png"></p>
+<p> 在你的主题配置文件内添加如下代码即可：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">favicon: /image/动物.png</span><br></pre></td></tr></table></figure>
+
+<p> 效果如图所示：</p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-036dc8e31a6c90ace72e655c6b7f99fd.png"></p>
+<h2 id="16-添加域名备案信息（butterfly主题）"><a href="#16-添加域名备案信息（butterfly主题）" class="headerlink" title="16. 添加域名备案信息（butterfly主题）"></a>16. 添加域名备案信息（butterfly主题）</h2><p>在你的主题配置文件下加入以下代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">footer:</span><br><span class="line">  owner:</span><br><span class="line">    <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">    since: 2024</span><br><span class="line">  custom_text: &lt;img src=<span class="string">&quot;https://haiyong.site/img/icp.png&quot;</span>&gt;&lt;a href=<span class="string">&quot;https://beian.miit.gov.cn/#/Integrated/index&quot;</span> style=<span class="string">&quot;color:black&quot;</span> target=<span class="string">&quot;_blank&quot;</span>&gt;xICP备xxx号-1(你的icp备案号)&lt;/a&gt;</span><br><span class="line">  copyright: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="17-nginx配置监听转发"><a href="#17-nginx配置监听转发" class="headerlink" title="17. nginx配置监听转发"></a>17. nginx配置监听转发</h2><p>安装好后加入如下配置，如果有的话直接替换就行了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">server&#123;</span><br><span class="line">  listen 80; <span class="comment"># 监听的端口</span></span><br><span class="line">  server_name  xxxx; <span class="comment"># 监听的地址，相当于就是你的域名地址</span></span><br><span class="line">  index  index.php index.html index.htm;</span><br><span class="line"></span><br><span class="line">  location / &#123;</span><br><span class="line">    proxy_pass xxxx; <span class="comment"># 转发地址，带上端口号</span></span><br><span class="line">    proxy_set_header Host <span class="variable">$proxy_host</span>; <span class="comment"># 修改转发请求头，让8080端口的应用可以受到真实的请求</span></span><br><span class="line">    proxy_set_header X-Real-IP <span class="variable">$remote_addr</span>;</span><br><span class="line">    proxy_set_header X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="18-搬运自己的csdn文章到hexo"><a href="#18-搬运自己的csdn文章到hexo" class="headerlink" title="18. 搬运自己的csdn文章到hexo"></a>18. 搬运自己的csdn文章到hexo</h2><p>百度一搜一大堆，这里自己简单总结下：</p>
+<h3 id="18-1-获取文章信息"><a href="#18-1-获取文章信息" class="headerlink" title="18.1 获取文章信息"></a>18.1 获取文章信息</h3><p>打开自己写的文章，打开开发者模式（F12），搜索<strong>article_content</strong>：</p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-07a8150976be516c41ce40a67270d779.png"></p>
+<h3 id="18-2-将复制的文章信息转换为md格式"><a href="#18-2-将复制的文章信息转换为md格式" class="headerlink" title="18.2 将复制的文章信息转换为md格式"></a>18.2 将复制的文章信息转换为md格式</h3><p>进入下方网站，按照序号操作，最后转换的文件不用下载，可以直接全选复制到typora里操作。</p>
+<p><a target="_blank" rel="noopener" href="https://tool.lu/markdown/" title="markdown编辑器 - 在线工具">markdown编辑器 - 在线工具</a></p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-fd14b2e6cf8f2b449c9dbb95294c074e.png"></p>
+<h3 id="18-3-对于图片的处理"><a href="#18-3-对于图片的处理" class="headerlink" title="18.3 对于图片的处理"></a>18.3 对于图片的处理</h3><p>csdn是有防盗链的，所以你直接复制粘贴放到hexo上图片是加载不出来的。</p>
+<p>方法一：另存为后复制粘贴（超级无脑）</p>
+<p>方法二：结合之前我写的文章</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/JesseXW/article/details/135740635?spm=1001.2014.3001.5501" title="腾讯云图床（对象存储）+typora+picgo实现图片一键上传-CSDN博客">腾讯云图床（对象存储）+typora+picgo实现图片一键上传-CSDN博客</a></p>
+<p>全自动上传，记得开一下这个设置，会自动进行url替换<img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-266310ebad104d5bb1209b8347956ad7.png"></p>
+<h3 id="18-4-图片压缩"><a href="#18-4-图片压缩" class="headerlink" title="18.4 图片压缩"></a>18.4 图片压缩</h3><p>可以使用tx云对象存储自带的压缩，也可以自己手动压缩成webp格式。步骤如下：</p>
+<p><a target="_blank" rel="noopener" href="https://ezgif.com/png-to-webp?err=expired" title="Online PNG to WebP image converter">Online PNG to WebP image converter</a></p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-86fd084319c35d88934998c8ebfc6805.png"></p>
+<p><img src="https://raw.githubusercontent.com/hujdong/image_auto/main/obsidian/1754448416-f970b1bc2e2a236cd003f6647a7aba72.png"></p>
+<p>webp的展示效果还是不错的，体积压缩了不少但清晰度还是挺能打的。</p>
+<p>后面对该图片替换就可以了</p>
+
       
-    </ul>
-  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">4</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-08-11T03:09:25.361Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By hujdong</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/project/js/utils.js"></script><script src="/project/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hujdong.github.io/project/2025/08/09/butterfly%E4%B8%BB%E9%A2%98%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97/" data-id="cme6juiqr0001tody61iw2svz" data-title="butterfly主题部署指南V2" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-在Linux中，如何进行系统更新和升级？" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/project/2025/08/09/%E5%9C%A8Linux%E4%B8%AD%EF%BC%8C%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0%E5%92%8C%E5%8D%87%E7%BA%A7%EF%BC%9F/" class="article-date">
+  <time class="dt-published" datetime="2025-08-09T05:16:52.000Z" itemprop="datePublished">2025-08-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/project/2025/08/09/%E5%9C%A8Linux%E4%B8%AD%EF%BC%8C%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0%E5%92%8C%E5%8D%87%E7%BA%A7%EF%BC%9F/">在Linux中，如何进行系统更新和升级？</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>在Linux中，系统更新和升级是维护系统安全性和功能性的重要任务。这通常涉及更新软件包、内核和系统工具。不同的Linux发行版有不同的包管理系统，以下是一些常见发行版中进行系统更新和升级的方法：</p>
+<h5 id="1-Debian-Ubuntu-系统"><a href="#1-Debian-Ubuntu-系统" class="headerlink" title="1. Debian&#x2F;Ubuntu 系统"></a>1. Debian&#x2F;Ubuntu 系统</h5><p>使用 <code>apt</code> 包管理器进行更新和升级。</p>
+<ol>
+<li><p><strong>更新软件包列表</strong>：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br></pre></td></tr></table></figure>
+<p> 这个命令会从配置的软件仓库中获取最新的软件包信息。</p>
+</li>
+<li><p><strong>升级所有已安装的软件包</strong>：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt upgrade</span><br></pre></td></tr></table></figure>
+<p> 这个命令会安装所有可用的更新，但不会删除任何软件包。</p>
+</li>
+<li><p><strong>安装新版本的内核</strong>：<br> 如果系统提供了新版本的内核，可以使用 <code>apt</code> 进行安装：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install linux-image-generic</span><br></pre></td></tr></table></figure>
+<p> 替换 <code>linux-image-generic</code> 为特定版本的内核，如果有的话。</p>
+</li>
+<li><p><strong>清理不再需要的软件包</strong>：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt autoremove</span><br></pre></td></tr></table></figure>
+<p> 这个命令会删除那些被安装为其他软件包依赖但现已不再需要的软件包。</p>
+</li>
+</ol>
+<h5 id="2-Red-Hat-CentOS-系统"><a href="#2-Red-Hat-CentOS-系统" class="headerlink" title="2. Red Hat&#x2F;CentOS 系统"></a>2. Red Hat&#x2F;CentOS 系统</h5><p>使用 <code>yum</code> 或 <code>dnf</code> 包管理器进行更新和升级。</p>
+<ol>
+<li><p><strong>更新软件包列表</strong>：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> yum check-update</span><br></pre></td></tr></table></figure>
+<p> 或者，如果你的系统使用 <code>dnf</code>：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> dnf check-update</span><br></pre></td></tr></table></figure>
+<p> 这些命令会检查可用的更新。</p>
+</li>
+<li><p><strong>升级所有已安装的软件包</strong>：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> yum update</span><br></pre></td></tr></table></figure>
+<p> 或者使用 <code>dnf</code>：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> dnf update</span><br></pre></td></tr></table></figure>
+<p> 这些命令会安装所有可用的更新。</p>
+</li>
+<li><p><strong>安装新版本的内核</strong>：<br> 通常，Red Hat&#x2F;CentOS 系统会通过正常的软件包更新流程提供新的内核。如果需要手动安装，可以搜索并安装特定的内核软件包：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> yum install kernel</span><br></pre></td></tr></table></figure>
+<p> 或者使用 <code>dnf</code>：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> dnf install kernel</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>清理缓存</strong>：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> yum clean all</span><br></pre></td></tr></table></figure>
+<p> 或者使用 <code>dnf</code>：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> dnf clean all</span><br></pre></td></tr></table></figure>
+<p> 这些命令会清理缓存中的软件包数据，释放磁盘空间。</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hujdong.github.io/project/2025/08/09/%E5%9C%A8Linux%E4%B8%AD%EF%BC%8C%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0%E5%92%8C%E5%8D%87%E7%BA%A7%EF%BC%9F/" data-id="cme6juiqw0004todyd7x52mxu" data-title="在Linux中，如何进行系统更新和升级？" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-我的第一篇博客" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/project/2025/08/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="article-date">
+  <time class="dt-published" datetime="2025-08-02T05:55:54.000Z" itemprop="datePublished">2025-08-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/project/2025/08/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="三星手机"><a href="#三星手机" class="headerlink" title="三星手机"></a>三星手机</h2><p><img src="https://www.helloimg.com/i/2025/08/02/688d9157801bc.png" alt="s25u.png"></p>
+<p>** 小米手机<br><img src="https://www.helloimg.com/i/2025/08/02/688d9156942bc.png" alt="mi15u.png"></p>
+<p>看看是否可以正常发布。<br>搭建参考的是利民工作室 <a target="_blank" rel="noopener" href="https://www.limin.studio/2024/11/03/wzbk/">https://www.limin.studio/2024/11/03/wzbk/</a><br>博客发布参考的是陶渊小明 <a target="_blank" rel="noopener" href="https://tyxiaoming.xin/2025/01/21/%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%8D%9A%E5%AE%A2/">https://tyxiaoming.xin/2025/01/21/%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%8D%9A%E5%AE%A2/</a></p>
+<p>本地启动命令 ：hexo clean； hexo generate; hexo server<br>发布到GitHub命令是：hexo clean； hexo generate; hexo deploy</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hujdong.github.io/project/2025/08/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" data-id="cme6juiqu0002todybmeb18k0" data-title="我的第一篇博客" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/project/2025/08/02/hello-world/" class="article-date">
+  <time class="dt-published" datetime="2025-08-02T05:39:42.051Z" itemprop="datePublished">2025-08-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/project/2025/08/02/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hujdong.github.io/project/2025/08/02/hello-world/" data-id="cme6juiqv0003tody1s3cd9d5" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/project/archives/2025/08/">八月 2025</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/project/2025/08/09/butterfly%E4%B8%BB%E9%A2%98%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97/">butterfly主题部署指南V2</a>
+          </li>
+        
+          <li>
+            <a href="/project/2025/08/09/%E5%9C%A8Linux%E4%B8%AD%EF%BC%8C%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0%E5%92%8C%E5%8D%87%E7%BA%A7%EF%BC%9F/">在Linux中，如何进行系统更新和升级？</a>
+          </li>
+        
+          <li>
+            <a href="/project/2025/08/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
+          </li>
+        
+          <li>
+            <a href="/project/2025/08/02/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 hujdong<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/project/" class="mobile-nav-link">Home</a>
+  
+    <a href="/project/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/project/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/project/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/project/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
